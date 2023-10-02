@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4edaada9-26c5-4d48-99a9-b7e36c3384dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/java/com/example/dice_app/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/drawable/dice_6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dice_app/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../listview_ex2/app/src/main/java/com/example/listview_ex/ListViewAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../listview_ex2/app/src/main/res/layout/listview_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/src/main/java/com/example/myapplication/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/src/main/java/com/example/practice/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../../settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/androidTest/java/com/example/twiceapp/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/java/com/example/twiceapp/ImageInsideActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/java/com/example/twiceapp/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/java/com/example/twiceapp/SplashActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/member_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/drawable/members.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/layout/activity_image_inside.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/layout/activity_splash.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/app/src/test/java/com/example/twiceapp/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/TwiceApp/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/10.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/11.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/12.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/13.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/14.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/4.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/5.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/6.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/7.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/8.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section0/9.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/10.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/11.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/4.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/5.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/6.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/7.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/8.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section1/9.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/4.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/5.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/6.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/7.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/8.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section2/9.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/1 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/1.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/10 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/10.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/11 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/11.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/2 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/3 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/3.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/4 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/4.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/5 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/5.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/6 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/6.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/7 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/7.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/8 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/8.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/9 solution.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/kotlin_inflearn_code/section3/9.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/androidTest/java/com/example/practiceone/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/java/com/example/practiceone/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/java/com/example/practiceone/bts1Activity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/java/com/example/practiceone/bts2Activity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/java/com/example/practiceone/bts3Activity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/bts_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/layout/activity_bts1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/layout/activity_bts2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/layout/activity_bts3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/app/src/test/java/com/example/practiceone/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../작업물/practiceone/settings.gradle.kts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": -1
+}]]></component>
+  <component name="ProjectId" id="2W9nzUxQyKvUjPQz5LrjILTLAuK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "android.gradle.sync.needed": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4edaada9-26c5-4d48-99a9-b7e36c3384dc" name="Changes" comment="" />
+      <created>1696153926381</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696153926381</updated>
+    </task>
+    <servers />
+  </component>
+</project>
