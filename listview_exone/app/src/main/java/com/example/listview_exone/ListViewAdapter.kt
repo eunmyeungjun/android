@@ -7,7 +7,7 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import kotlinx.coroutines.NonDisposableHandle.parent
 
-class ListViewAdapter(val List :MutableList<String>): BaseAdapter() {
+class ListViewAdapter(val List :MutableList<ListViewModel>): BaseAdapter() {
     override fun getCount(): Int {
         return List.size
     }
@@ -29,7 +29,9 @@ class ListViewAdapter(val List :MutableList<String>): BaseAdapter() {
         }
 
        val title= p1!!.findViewById<TextView>(R.id.listViewItem)
-            title.text=List[p0]
+        val content =p1!!.findViewById<TextView>(R.id.listViewItem2)
+            title.text=List[p0].title
+            content.text =List[p0].content
 
         return p1!!
     }
