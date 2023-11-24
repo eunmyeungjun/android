@@ -11,11 +11,10 @@ import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 
 class MainActivity : AppCompatActivity() {
-
-    private val clearButton by lazy{findViewById<Button>(R.id.btn_clear)}
-    private val addButton by lazy{findViewById<Button>(R.id.btn_add)}
-    private val runButton by lazy{findViewById<Button>(R.id.btn_run)}
-    private val numberPick by lazy{findViewById<NumberPicker>(R.id.np_num)}
+    private  val clearButton by lazy { findViewById<Button>(R.id.btn_clear) }
+    private  val addButton by lazy { findViewById<Button>(R.id.btn_add) }
+    private  val runButton by lazy { findViewById<Button>(R.id.btn_run) }
+    private val numberPick by lazy{ findViewById<NumberPicker>(R.id.np_num) }
 
     private val numTextViewList :List<TextView> by lazy {
         listOf<TextView>(
@@ -29,28 +28,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     private var didRun = false
+
     private val pickNumberSet = hashSetOf<Int>()
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        numberPick.minValue=1
-        numberPick.maxValue=45
+        numberPick.minValue = 1
+        numberPick.maxValue = 45
 
         initRunutton()
         initAddButton()
         initClearButton()
     }
-    private fun initAddButton(){
+    private fun initAddButton() {
         addButton.setOnClickListener {
             when{
-                didRun ->showToast("초기화 후에 시도해 주세요.")
-                pickNumberSet.size >=5 ->showToast("5개 까지만 설정할 수 있습니다.")
-                pickNumberSet.contains(numberPick.value) ->showToast("이미 선택 된 숫자입니다.")
-                else ->{
+                didRun -> showToast("초기화 후에 시도해 주세요.")
+                pickNumberSet.size >=5 -> showToast("5개 까지만 설정할 수 있습니다.")
+                pickNumberSet.contains(numberPick.value) -> showToast("이미 선택 된 숫자입니다.")
+
+                else -> {
                     val textView = numTextViewList[pickNumberSet.size]
-                    textView.isInvisible =true
+                    textView.isVisible = true
                     textView.text = numberPick.value.toString()
                     setNumBack(numberPick.value,textView)
                     pickNumberSet.add(numberPick.value)
@@ -80,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                 val textView =numTextViewList[index]
                 textView.text =number.toString()
                 textView.isVisible = true
-                setNumBack(numberPick.value,textView)
+                setNumBack(number,textView)
                 pickNumberSet.add(numberPick.value)
             }
         }
@@ -92,7 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun setNumBack(number:Int,textView:TextView){
+    private fun setNumBack(number:Int , textView:TextView){
         val background = when(number) {
             in 1..10 -> R.drawable.circle_yellow
             in 11..20 -> R.drawable.circle_blue
