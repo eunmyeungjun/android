@@ -13,14 +13,19 @@ fun main(){
         }
         println("계산할 두번째 정수를 입력해 주세요")
         val secondNum = readLine()!!.toInt()
-        var result = 0
-        result =  when(operator) {
-                "+" ->  AddOperation(firstNum , secondNum ,"+").add(firstNum , secondNum)
-                "-" ->  SubtractOperation(firstNum , secondNum ,"-").subtract(firstNum , secondNum)
-                "*" ->  MultiplyOperaiton(firstNum , secondNum ,"*").multiple(firstNum , secondNum)
-                "%" ->  DivideOperation(firstNum , secondNum , "%").divide(firstNum , secondNum)
-            else -> return
-            }
+       var result = 0.0
+        val addCal = Calculator(AddOperation())
+        val subCal = Calculator(SubtractOperation())
+        val divCal = Calculator(DivideOperation())
+        val mutCal = Calculator(MultiplyOperaiton())
+        when(operator){
+            "+" -> result = addCal.operate(firstNum ,secondNum)
+            "-" -> result = subCal.operate(firstNum , secondNum)
+            "*" -> result = mutCal.operate(firstNum, secondNum)
+            "%" -> result = divCal.operate(firstNum , secondNum)
+        }
+
+
 
         
         println("$firstNum 에 $operator $secondNum 을 한 결과는 $result 입니다.\n\n" +
@@ -30,7 +35,7 @@ fun main(){
         if (againNum == 2) {
             break
         }else{
-            firstNum = result
+            firstNum = result.toInt()
         }
 
     }

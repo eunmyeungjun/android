@@ -1,8 +1,7 @@
 package com.example.mycalculator
 
-open class Calculator(val a : Int ,val b : Int , val operator : String) {
-    fun calculate(): Int {
-        return a + b
-
+open class Calculator(private val operator : AbstractOperation) {
+    fun operate(num1 : Int , num2 : Int) : Double{
+        return operator.operate(num1 ,num2)
     }
 }

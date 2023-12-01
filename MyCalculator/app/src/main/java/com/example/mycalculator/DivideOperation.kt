@@ -1,8 +1,15 @@
 package com.example.mycalculator
 
-class DivideOperation(a : Int , b : Int , oper : String) : Calculator (a , b , "%") {
+import java.lang.ArithmeticException
 
-    fun divide (a : Int , b : Int) : Int {
-        return a/b
+class DivideOperation() : AbstractOperation() {
+
+    override fun operate(num1: Int, num2: Int): Double {
+        require(num2 != 0){
+            ArithmeticException("0 으로는 나눌 수 없습니다.")
+        }
+        return (num1 / num2).toDouble()
+
+
     }
 }
