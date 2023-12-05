@@ -13,7 +13,7 @@ fun main(){
         }
         println("계산할 두번째 정수를 입력해 주세요")
         val secondNum = readLine()!!.toInt()
-       var result = 0.0
+        var result = 0.0
         val addCal = Calculator(AddOperation())
         val subCal = Calculator(SubtractOperation())
         val divCal = Calculator(DivideOperation())
@@ -34,7 +34,7 @@ fun main(){
         var againNum = readLine()!!.toInt()
         if (againNum == 2) {
             break
-        }else{
+        } else {
             firstNum = result.toInt()
         }
 
