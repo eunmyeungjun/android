@@ -1,9 +1,7 @@
 package com.example.mykiosk
 
-open class Burger : Food() {
+class IceCream : Food() {
     override fun displayInfo() {
 
     }
-
-
 }
