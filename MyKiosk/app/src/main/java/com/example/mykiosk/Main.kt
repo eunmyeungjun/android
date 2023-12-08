@@ -1,36 +1,26 @@
 package com.example.mykiosk
 
 fun main(){
-    while (true) {
-        println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.\n\n" +
-            "[ SHAKESHACK MENU ]\n" +
-                    "1. Burgers         | 앵거스 비프 통살을 다져만든 버거\n" +
-                    "2. Forzen Custard  | 매장에서 신선하게 만드는 아이스크림\n" +
-                    "3. Drinks          | 매장에서 직접 만드는 음료\n" +
-                    "4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주\n" +
-                    "0. 종료             | 프로그램 종료")
+    val menuList = MainMenu()
+    val bugerMenu = Burger("",0.0)
+    var orderList = ArrayList<Food>()
 
+    while (true) {
+        if (orderList.isEmpty()){
+            menuList.showMenu()
+        }else {
+            menuList.showOrderListNotEmpty()
+        }
         var menuNum : Int
         while(true) {
             try {
                  menuNum = readLine()!!.toInt()
                 if (menuNum > 5){
-                    println("메뉴판에 없는 번호입니다. 번호를 다시입력해 주세요\n\n"+
-                            "[ SHAKESHACK MENU ]\n" +
-                            "1. Burgers         | 앵거스 비프 통살을 다져만든 버거\n" +
-                            "2. Forzen Custard  | 매장에서 신선하게 만드는 아이스크림\n" +
-                            "3. Drinks          | 매장에서 직접 만드는 음료\n" +
-                            "4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주\n" +
-                            "0. 종료             | 프로그램 종료")
+                    menuList.overMenu()
                 } else break
+
             } catch (e:NumberFormatException){
-                println("잘못된 형식입니다. 번호를 다시입력해 주세요\n\n" +
-                        "[ SHAKESHACK MENU ]\n" +
-                        "1. Burgers         | 앵거스 비프 통살을 다져만든 버거\n" +
-                        "2. Forzen Custard  | 매장에서 신선하게 만드는 아이스크림\n" +
-                        "3. Drinks          | 매장에서 직접 만드는 음료\n" +
-                        "4. Beer            | 뉴욕 브루클린 브루어리에서 양조한 맥주\n" +
-                        "0. 종료             | 프로그램 종료")
+                menuList.notInt()
             }
         }
         when(menuNum) { 
@@ -40,45 +30,149 @@ fun main(){
             }
 
             1 -> {
-                println(
-                    "[ Burgers MENU ]\n" +
-                    "1. ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거\n" +
-                    "2. SmokeShack    | W 8.9 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거\n" +
-                    "3. Shroom Burger | W 9.4 | 몬스터 치즈와 체다 치즈로 속을 채운 베지테리안 버거\n" +
-                    "4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거\n" +
-                    "0. 뒤로가기      | 뒤로가기")
-
+                bugerMenu.BurgerMenu()
                 var burgerNum : Int
                 while(true) {
                     try {
                         burgerNum = readLine()!!.toInt()
                         if (burgerNum > 5){
-                            println(
-                                "메뉴판에 없는 번호입니다. 번호를 다시입력해 주세요\n\n"+
-                                "[ Burgers MENU ]\n" +
-                                "1. ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거\n" +
-                                "2. SmokeShack    | W 8.9 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거\n" +
-                                "3. Shroom Burger | W 9.4 | 몬스터 치즈와 체다 치즈로 속을 채운 베지테리안 버거\n" +
-                                "4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거\n" +
-                                "0. 뒤로가기      | 뒤로가기")
+                            bugerMenu.burgerNumOver()
                         } else break
                     } catch (e:NumberFormatException){
-                        println(
-                            "잘못된 형식입니다. 번호를 다시입력해 주세요\n\n" +
-                            "[ Burgers MENU ]\n" +
-                            "1. ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거\n" +
-                            "2. SmokeShack    | W 8.9 | 베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거\n" +
-                            "3. Shroom Burger | W 9.4 | 몬스터 치즈와 체다 치즈로 속을 채운 베지테리안 버거\n" +
-                            "4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거\n" +
-                            "0. 뒤로가기      | 뒤로가기")
+                        bugerMenu.burgerNumNotInt()
                     }
                 }
                 when(burgerNum) {
                     0 -> menuNum = 1
 
+                    1 -> {
+                        ShackBurger().showInfo()
+                        println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                        "1. 확인        2. 취소")
+                        var yesOrNo : Int
+                        while (true){
+                            try{
+                                yesOrNo = readLine()!!.toInt()
+                                if (yesOrNo == 1 || yesOrNo == 2){
+                                    break
+                                } else{
+                                    println("올바른 숫자를 입력해 주세요")
+                                }
+                            }catch (e:NumberFormatException){
+                                println("올바른 숫자를 입력해 주세요")
+                                println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                        "1. 확인        2. 취소")
+                            }
+                        }
+                        when(yesOrNo){
+                            1 -> {
+                                println("${ShackBurger().name} 가 장바구니에 추가되었습니다.\n")
+                                orderList.add(ShackBurger())
+                            }
+                            2 ->{
+                                println("주문을 취소하였습니다.")
+                                menuNum = 1
+                            }
+                        }
+
+                    }
+                    2 -> {
+                        SmokeShack().showInfo()
+                        println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                "1. 확인        2. 취소")
+                        var yesOrNo : Int
+                        while (true){
+                            try{
+                                yesOrNo = readLine()!!.toInt()
+                                if (yesOrNo == 1 || yesOrNo == 2){
+                                    break
+                                } else{
+                                    println("올바른 숫자를 입력해 주세요")
+                                }
+                            }catch (e:NumberFormatException){
+                                println("올바른 숫자를 입력해 주세요")
+                                println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                        "1. 확인        2. 취소")
+                            }
+                        }
+                        when(yesOrNo){
+                            1 -> {
+                                println("${SmokeShack().name} 가 장바구니에 추가되었습니다.\n")
+                                orderList.add(SmokeShack())
+                            }
+                            2 ->{
+                                println("주문을 취소하였습니다.")
+                                menuNum = 1
+                            }
+                        }
+                    }
+
+                    3 -> {
+                        ShroomBurger().showInfo()
+                        println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                "1. 확인        2. 취소")
+                        var yesOrNo : Int
+                        while (true){
+                            try{
+                                yesOrNo = readLine()!!.toInt()
+                                if (yesOrNo == 1 || yesOrNo == 2){
+                                    break
+                                } else{
+                                    println("올바른 숫자를 입력해 주세요")
+                                }
+                            }catch (e:NumberFormatException){
+                                println("올바른 숫자를 입력해 주세요")
+                                println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                        "1. 확인        2. 취소")
+                            }
+                        }
+                        when(yesOrNo){
+                            1 -> {
+                                println("${ShroomBurger().name} 가 장바구니에 추가되었습니다.\n")
+                                orderList.add(ShroomBurger())
+                            }
+                            2 ->{
+                                println("주문을 취소하였습니다.")
+                                menuNum = 1
+                            }
+                        }
+                    }
+                    4 -> {
+                        Hamburger().showInfo()
+                        println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                "1. 확인        2. 취소")
+                        var yesOrNo : Int
+                        while (true){
+                            try{
+                                yesOrNo = readLine()!!.toInt()
+                                if (yesOrNo == 1 || yesOrNo == 2){
+                                    break
+                                } else{
+                                    println("올바른 숫자를 입력해 주세요")
+                                }
+                            }catch (e:NumberFormatException){
+                                println("올바른 숫자를 입력해 주세요")
+                                println("위 메뉴를 장바구니에 추가하시겠습니까?\n"+
+                                        "1. 확인        2. 취소")
+                            }
+                        }
+                        when(yesOrNo){
+                            1 -> {
+                                println("${Hamburger().name} 가 장바구니에 추가되었습니다.\n")
+                                orderList.add(Hamburger())
+                            }
+                            2 ->{
+                                println("주문을 취소하였습니다.")
+                                menuNum = 1
+                            }
+                        }
+                    }
                 }//버거넘
 
             }//메뉴넘1번
+            2 -> {
+                println("Frozen custard는 아직..")
+            }
 
         }//when 메뉴넘
         
