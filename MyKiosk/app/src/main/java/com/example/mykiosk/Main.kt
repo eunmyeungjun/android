@@ -6,11 +6,8 @@ fun main(){
     var orderList = ArrayList<Food>()
 
     while (true) {
-        if (orderList.isEmpty()){
             menuList.showMenu()
-        }else {
-            menuList.showOrderListNotEmpty()
-        }
+
         var menuNum : Int
         while(true) {
             try {
@@ -180,3 +177,31 @@ fun main(){
 
 
 }//main
+
+fun numCheck(a : Int , b: Int , print : String){
+    var number : Int
+    while (true){
+        println("$print")
+        try{
+            number = readLine()!!.toInt()
+            if (number !in 1..a){
+                println("목록에 없는 번호입니다. 다시 입력해 주세요")
+            }else{
+                break
+            }
+        }catch (e:NumberFormatException){
+            println("잘못된 형식입니다. 숫자를 다시 입력해 주세요")
+        }
+    }
+}
+
+/*    try {
+                 menuNum = readLine()!!.toInt()
+                if (menuNum > 5){
+                    menuList.overMenu()
+                } else break
+
+            } catch (e:NumberFormatException){
+                menuList.notInt()
+            }
+ */

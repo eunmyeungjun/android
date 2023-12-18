@@ -13,9 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My Application"
-include(":app")
-include(":app")
-include(":app")
-include(":app")
+rootProject.name = "spartaActivity"
 include(":app")
