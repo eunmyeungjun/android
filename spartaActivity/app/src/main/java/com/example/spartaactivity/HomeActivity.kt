@@ -25,7 +25,6 @@ class HomeActivity : AppCompatActivity() {
         val idView = findViewById<TextView>(R.id.tv_id)
         idView.text = "아이디 : $userId"
 
-
         val btnFinish = findViewById<Button>(R.id.btn_end)
         btnFinish.setOnClickListener {
             finish()
