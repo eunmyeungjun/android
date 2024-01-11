@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_rvItemCard"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="30dp">
+
+        <ImageView
+            android:id="@+id/iv_rvItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/black"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_rvItemName"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="상품이름은 무엇입니다"
+        app:layout_constraintStart_toEndOf="@id/cv_rvItemCard"
+        app:layout_constraintTop_toTopOf="@+id/cv_rvItemCard"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:maxLines="2"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_rvUserTown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수원시 영통 원청동"
+        app:layout_constraintStart_toStartOf="@id/tv_rvItemName"
+        app:layout_constraintTop_toBottomOf="@id/tv_rvItemName"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_rvItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40,000원"
+        app:layout_constraintStart_toStartOf="@id/tv_rvUserTown"
+        app:layout_constraintTop_toBottomOf="@id/tv_rvUserTown"
+        android:layout_marginTop="5dp"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/iv_rvTalk"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_rvTalkPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24"
+        app:layout_constraintStart_toEndOf="@id/iv_rvTalk"
+        app:layout_constraintTop_toTopOf="@id/iv_rvTalk"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_rvTalk"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/iv_rvHeart"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintStart_toEndOf="@id/tv_rvTalkPeople"
+        app:layout_constraintTop_toTopOf="@id/tv_rvTalkPeople"
+        app:layout_constraintBottom_toBottomOf="@id/tv_rvTalkPeople"
+        android:src="@drawable/heart"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_rvHeartPeople"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/iv_rvHeart"
+        app:layout_constraintTop_toTopOf="@id/iv_rvHeart"
+        app:layout_constraintBottom_toBottomOf="@id/iv_rvHeart"
+        android:layout_marginStart="5dp"
+        android:text="24"
+        android:textSize="14sp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#CACACA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+
+
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
