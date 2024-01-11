@@ -7,10 +7,13 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.applemarket.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 
@@ -64,6 +67,31 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+//        binding.rvRecyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//                if(!binding.rvRecyclerView.canScrollVertically(-1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
+//                    binding.btnFloatingBtn.visibility = View.GONE
+//                    isTop = true
+//                } else if(isTop) {
+//                    binding.btnFloatingBtn.visibility = View.VISIBLE
+//                    isTop = false
+//                }
+//            }
+//        })
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (!NotificationManagerCompat.from(this).areNotificationsEnabled()) {
+                // 알림 권한이 없다면, 사용자에게 권한 요청
+                val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                    putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
+                }
+                startActivity(intent)
+            }
+        }
+
+
         fun notification() {
 
             val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
@@ -102,7 +130,12 @@ class MainActivity : AppCompatActivity() {
             notification()
         }
 
+
+
+
+
     }
+
     //super를 어디에 넣어야 하는지 찾아보기
     override fun onBackPressed() {
 
