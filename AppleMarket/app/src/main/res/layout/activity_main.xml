@@ -56,26 +56,21 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/conLayOut"/>
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/btn_floatingBtn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="#FF9900"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/rv_recyclerView"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/rv_recyclerView"-->
-<!--        android:layout_marginEnd="10dp"-->
-<!--        android:layout_marginBottom="10dp"-->
-<!--        android:clickable="true"-->
-<!--        android:src="@drawable/uparrow" />-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_floatingBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="20dp"
+        tools:ignore="ContentsDescription"
+        android:visibility="invisible"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:src="@drawable/uparrow"
+        android:tint="@null">
 
-
-
-
-
-
-
-
-
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 

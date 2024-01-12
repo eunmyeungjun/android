@@ -13,11 +13,17 @@ class RVAdapter (val mItems : MutableList<MarketItem>): RecyclerView.Adapter<RVA
         return Holder(binding)
     }
 
+    interface ItemLongClick {
+        fun onLongClick (view: View,position: Int)
+
+    }
+
     interface ItemClick {
         fun onClick(view : View, position: Int)
     }
 
     var itemClick : ItemClick? = null
+    var itemLongClick : ItemLongClick? = null
 
     override fun onBindViewHolder(holder: RVAdapter.Holder, position: Int) {
         holder.itemImage.setImageResource(mItems[position].aImage)
@@ -32,7 +38,19 @@ class RVAdapter (val mItems : MutableList<MarketItem>): RecyclerView.Adapter<RVA
                 itemClick?.onClick(it,position)
             }
         }
+
+        if (itemLongClick != null) {
+            holder.itemView.setOnLongClickListener() OnLongClickListener@ {
+                itemLongClick?.onLongClick(it,position)
+                return@OnLongClickListener true
+            }
+        }
+
+
     }
+
+
+
 
     override fun getItemId(position: Int): Long {
         return position.toLong()

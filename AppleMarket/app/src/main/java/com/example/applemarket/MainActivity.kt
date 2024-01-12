@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
+import android.view.animation.AlphaAnimation
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -67,19 +68,39 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        adapter.itemLongClick = object : RVAdapter.ItemLongClick {
+            override fun onLongClick(view: View, position: Int) {
+                val removeDialog = AlertDialog.Builder(this@MainActivity)
+                removeDialog.setIcon(R.drawable.chat)
+                removeDialog.setTitle("상품 삭제")
+                removeDialog.setMessage("정말 상품을 삭제할까요??")
 
-//        binding.rvRecyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener() {
-//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-//                super.onScrollStateChanged(recyclerView, newState)
-//                if(!binding.rvRecyclerView.canScrollVertically(-1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
-//                    binding.btnFloatingBtn.visibility = View.GONE
-//                    isTop = true
-//                } else if(isTop) {
-//                    binding.btnFloatingBtn.visibility = View.VISIBLE
-//                    isTop = false
-//                }
-//            }
-//        })
+
+                val listener = object :DialogInterface.OnClickListener{
+                    override fun onClick(dialog: DialogInterface?, which: Int) {
+
+                        when (which) {
+                            DialogInterface.BUTTON_POSITIVE -> {
+                                itemList.removeAt(position)
+                                adapter.notifyItemRemoved(position)
+                            }
+                            DialogInterface.BUTTON_NEGATIVE -> dialog?.dismiss()
+                        }
+
+
+                    }
+                }
+                removeDialog.setPositiveButton("네! 삭제할게요",listener)
+                removeDialog.setNegativeButton("아니요! 삭제하지 않을래요!",listener)
+
+                removeDialog.show()
+            }
+
+        }
+
+
+
+
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (!NotificationManagerCompat.from(this).areNotificationsEnabled()) {
@@ -129,6 +150,43 @@ class MainActivity : AppCompatActivity() {
         binding.ivBell.setOnClickListener {
             notification()
         }
+
+        val fadeIn = AlphaAnimation(0f,1f).apply { duration = 2000 }
+        val fadeOut = AlphaAnimation(1f,0f).apply { duration = 2000 }
+        var isTop = true
+
+       binding.rvRecyclerView.addOnScrollListener(object :RecyclerView.OnScrollListener(){
+           override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+               super.onScrollStateChanged(recyclerView, newState)
+               if (!binding.rvRecyclerView.canScrollVertically(-1) && newState ==RecyclerView.SCROLL_STATE_IDLE){
+                   binding.btnFloatingBtn.startAnimation(fadeOut)
+                   binding.btnFloatingBtn.visibility = View.GONE
+                   isTop = true
+               } else {
+                   if (isTop) {
+                       binding.btnFloatingBtn.visibility = View.INVISIBLE
+                       binding.btnFloatingBtn.startAnimation(fadeIn)
+                       isTop = false
+                   }
+               }
+           }
+       })
+        binding.btnFloatingBtn.setOnClickListener {
+            binding.rvRecyclerView.smoothScrollToPosition(0)
+        }
+
+//        binding.rvRecyclerView.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//                if(!binding.rvRecyclerView.canScrollVertically(-1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
+//                    binding.btnFloatingBtn.visibility = View.GONE
+//                    isTop = true
+//                } else if(isTop) {
+//                    binding.btnFloatingBtn.visibility = View.VISIBLE
+//                    isTop = false
+//                }
+//            }
+//        })
 
 
 
