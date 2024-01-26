@@ -31,8 +31,6 @@ class DetailActivity : AppCompatActivity() {
             binding.tvUserTown.text = inputData.aTown
             binding.tvDetail.text = inputData.aDetail
             binding.tvPrice.text = inputData.aPrice
-
-
         }
 
 

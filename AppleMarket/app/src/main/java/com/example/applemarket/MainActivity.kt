@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         itemList.add(MarketItem(R.drawable.sample9,"4행정 엔진분무기 판매합니다.","원주시 명륜2동","${dec.format(30000)}", "28","7","3년전에 사서 한번 사용하고 그대로 둔 상태입니다. 요즘 사용은 안해봤습니다. 그래서 저렴하게 내 놓습니다. 중고라 반품은 어렵습니다.","알뜰한"))
         itemList.add(MarketItem(R.drawable.sample10,"셀린느 버킷 가방","중구 동화동","${dec.format(190000)}", "6","40","22년 신세계 대전 구매입니당\n셀린느 버킷백\n구매해서 몇번사용했어요\n까짐 스크래치 없습니다.\n타지역에서 보내는거라 택배로 진행합니당!","똑태현"))
 
+        
 
         val adapter = RVAdapter(itemList)
         binding.rvRecyclerView.adapter = adapter
