@@ -22,6 +22,11 @@ class RVAdapter(val items : MutableList<Document>) : RecyclerView.Adapter<RVAdap
     interface LikeClick {
         fun onLikeClicked(data: Document)
     }
+    //+ 아이템 초기화 부분
+    fun clearItem() {
+        items.clear()
+        notifyDataSetChanged()
+    }
 
      var likeClickListener : LikeClick? = null
 

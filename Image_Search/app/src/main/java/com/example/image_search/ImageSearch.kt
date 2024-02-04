@@ -3,6 +3,7 @@ package com.example.image_search
 import android.content.Context
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -55,25 +56,30 @@ class ImageSearch : Fragment() {
 
         loadSearchKey()
 
-        binding.btnSearch.setOnClickListener {
-            val searchKey = binding.etSearch.text.toString()
-
-            goSearch(searchKey)
-            hideKeyBoard()
-
-            saveSearchKey(searchKey)
-        }
 
         adapter = RVAdapter(dataList)
         binding.rvSearchResult.adapter = adapter
 
         binding.rvSearchResult.layoutManager = GridLayoutManager(context,2)
 
+
+        binding.btnSearch.setOnClickListener {
+            val searchKey = binding.etSearch.text.toString()
+            adapter.clearItem()
+            goSearch(searchKey)
+            hideKeyBoard()
+
+            saveSearchKey(searchKey)
+            (context as MainActivity)
+        }
+
         adapter.likeClickListener = object : RVAdapter.LikeClick{
             override fun onLikeClicked(data: Document) {
  //               Toast.makeText(requireContext(),"${data}",Toast.LENGTH_SHORT).show()
-                setFragmentResult(Const.REQUEST_KEY ,
-                    bundleOf(Const.FAVORITE_DATA to data))
+//                setFragmentResult(Const.REQUEST_KEY ,
+//                    bundleOf(Const.FAVORITE_DATA to data))
+                (context as MainActivity).addToList(data)
+                Log.d("로그디","data확인ImageSearch")
 
 //                val sharedPrefer = requireActivity().getSharedPreferences("${Const.myBox_Key}", Context.MODE_PRIVATE)
 //                val editor = sharedPrefer.edit()

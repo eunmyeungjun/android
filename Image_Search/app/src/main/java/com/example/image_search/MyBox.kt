@@ -15,7 +15,7 @@ class MyBox : Fragment() {
 
     private var _binding : FragmentMyBoxBinding? = null
     private val binding get() = _binding!!
-    val likeList = mutableListOf<Document>()
+    var likeList = mutableListOf<Document>()
     private lateinit var adapter: LikeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,17 +27,22 @@ class MyBox : Fragment() {
             View? {
         _binding = FragmentMyBoxBinding.inflate(inflater,container,false)
 
-        arguments?.getParcelableArrayList<Document>("likeList")?.let {
-            likeList.addAll(it)
-        }
+//        arguments?.getParcelableArrayList<Document>("likeList")?.let {
+//            likeList.addAll(it)
+//        }
+        val mainActivity = activity as MainActivity
+        likeList = mainActivity.likeList
         adapter = LikeAdapter(likeList)
         binding.rvMyBox.adapter = adapter
         binding.rvMyBox.layoutManager = GridLayoutManager(context,2)
+
+
 
         adapter.cancel = object : LikeAdapter.cancelClick {
             override fun cancleClick(position: Int) {
                 likeList.removeAt(position)
                 adapter.notifyItemRemoved(position)
+               adapter.notifyItemRemoved(position)
             }
 
         }

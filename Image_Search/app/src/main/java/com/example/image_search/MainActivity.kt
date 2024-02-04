@@ -74,6 +74,12 @@ class MainActivity : AppCompatActivity(){
 //        Log.d("로그디","${dataList.size} 위치는 MainActivity ${dataList}  ")
 //    }
 
+    fun addToList(data:Document) {
+        likeList.add(data)
+        Log.d("로그디","data확인ImageSearch")
+
+    }
+
 
 
 }
